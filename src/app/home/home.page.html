@@ -1,0 +1,56 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title size="large" slot="start">
+            <img src="./assets/icon/hangover_logo_4x.jpg" class="title-image"/>
+        </ion-title>
+        <ion-title size="small" slot="end">
+                <img src="./assets/icon/head.jpg" class="title-image-right"/>
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-text class="main-text">
+        <h1>HANGOVER DAY</h1>
+    </ion-text>
+    <br/>
+    <!--    <form #f="ngForm" (ngSubmit)="onSubmit(f)">-->
+    <ion-item class="select1">
+        <ion-label class="main-text">Cocktail Limit</ion-label>
+        <ion-select class="main-text" value="1" okText="Select" cancelText="Dismiss" [(ngModel)]="value">
+            <ion-select-option value="1">1</ion-select-option>
+            <ion-select-option value="2">2</ion-select-option>
+            <ion-select-option value="3">3</ion-select-option>
+            <ion-select-option value="4">4</ion-select-option>
+            <ion-select-option value="5">5</ion-select-option>
+            <ion-select-option value="6">6</ion-select-option>
+            <ion-select-option value="7">7</ion-select-option>
+            <ion-select-option value="8">8</ion-select-option>
+            <ion-select-option value="9">9</ion-select-option>
+            <ion-select-option value="10">10</ion-select-option>
+        </ion-select>
+    </ion-item>
+    <br/>
+    <ion-text class="main-text">
+        <h4>Emergency Contact</h4>
+    </ion-text>
+
+    <ion-item class="select1">
+        <ion-label class="main-text">Name :</ion-label>
+        <ion-input
+                class="main-text"
+                type="text"
+        ></ion-input>
+    </ion-item>
+
+    <ion-item class="select1">
+        <ion-label class="main-text">Number :</ion-label>
+        <ion-input class="main-text" type="tel" maxlength="10" [(ngModel)]="telNumber"
+                   (keyup)="iskeyUpNumber($event)"></ion-input>
+    </ion-item>
+    <br/><br/><br/><br/><br/>
+    <ion-button class="main-text" expand="block" fill="outline" (click)="onLogin()">
+        Let The Games Begin
+    </ion-button>
+    <!--    </form>-->
+</ion-content>

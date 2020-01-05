@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title size="large" slot="start">
+      <img src="./assets/icon/hangover_logo_4x.jpg" class="title-image"/>
+    </ion-title>
+    <ion-title size="small" slot="end">
+      <img src="./assets/icon/head.jpg" class="title-image-right"/>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content >
+  <ion-text class="main-text">
+    <h1>HANGOVER TIME</h1>
+  </ion-text>
+  <ion-item class="select1">
+    <ion-label class="main-text">Select Drink</ion-label>
+    <ion-select class="main-text" value="1" okText="Select" (ionChange)="drink()" cancelText="Dismiss" [(ngModel)]="drinks">
+      <ion-select-option *ngFor="let d of drinksData" value="{{d.idDrink}}">{{d.strDrink}}</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <br>
+  <br>
+  <ion-item class="select1">
+    <ion-label class="main-text">Glass Type</ion-label>
+  </ion-item>
+  <ion-item class="select1">
+    <ion-buttons>
+      <ion-button (click)="glasscocktail()">
+        <ion-img src="../../assets/icon/icons8-alcoholic-cocktail-64.png"></ion-img>
+      </ion-button>
+      <ion-button (click)="glasshanukkah()">
+        <ion-img src="../../assets/icon/icons8-hanukkah-glass-50.png"></ion-img>
+      </ion-button>
+      <ion-button (click)="glassmartini()">
+        <ion-img src="../../assets/icon/icons8-martini-glass-32.png"></ion-img>
+      </ion-button>
+      <ion-button (click)="glasswine()">
+        <ion-img src="../../assets/icon/icons8-wine-glass-64.png"></ion-img>
+      </ion-button>
+    </ion-buttons>
+  </ion-item>
+  <ion-item class="select1">
+    <ion-label id="glasses">Glass Chosen: - {{glasses}}</ion-label>
+  </ion-item>
+
+    <ion-card class="alert-card">
+      <ion-label class="main-text">Hangover Alert</ion-label>
+      <h1 class="main-text">Drinks Left:- {{value}}</h1>
+    </ion-card>
+
+  <ion-item class="select2">
+    <ion-button class="main-text-2" expand="block" fill="outline" (click)="Needhelp()">Need Help</ion-button>
+    <ion-buttons>
+      <ion-button (click)="dustbin()">
+        <ion-icon slot="end" name="trash" size="large"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-item>
+</ion-content>

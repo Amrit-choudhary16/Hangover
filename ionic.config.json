@@ -1,0 +1,7 @@
+{
+  "name": "MyFirstIonic",
+  "type": "angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
